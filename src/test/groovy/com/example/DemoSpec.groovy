@@ -5,7 +5,8 @@ import io.micronaut.test.extensions.spock.annotation.MicronautTest
 import spock.lang.Specification
 import jakarta.inject.Inject
 
-@MicronautTest
+//Without eager initialization works
+@MicronautTest(contextBuilder = EagerInitSingletonsApplicationContextBuilder)
 class DemoSpec extends Specification {
 
     @Inject
